@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "generalsans-medium";
+    src: url("/fonts/GeneralSans-Medium.woff") format("woff");
+  }
+  @font-face {
+    font-family: "generalsans-semibold";
+    src: url("/fonts/GeneralSans-Semibold.woff") format("woff");
+  }
+  @font-face {
+    font-family: "generalsans-bold";
+    src: url("/fonts/GeneralSans-Bold.woff") format("woff");
+  }
+  html {
+    scroll-behavior: initial;
+    font-family: "generalsans-medium";
+  }
+  html::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  html::-webkit-scrollbar-thumb {
+    background-color: var(--stroke-color);
+    border-radius: 6px;
+  }
+  body{
+    background: #F9F8F6;
+  }
+  h1 {
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+  }
+  h2 {
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: 2.25rem;
+  }
+  h3 {
+    font-family: "generalsans-bold";
+    font-size: 2rem;
+  }
+  h4 {
+    font-family: "generalsans-semibold";
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-family: "generalsans-semibold";
+    font-size: 1.25rem;
+  }
+  h6 {
+    font-family: "generalsans-medium";
+    font-size: 1.25rem;
+  }
+  span {
+    font-family: "generalsans-medium";
+    font-size: 1rem;
+  }
+  .shadow-custom-drop {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.09);
+  }
+  .backdrop{
+    background-image: url("/images/backdrop.png"); 
+  }
+  .truncate-multiline {
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .card {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.5s ease-out;
+  }
+  .card-animation {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* styles.css or relevant file */
+  .arrow-icon {
+    transition: transform 0.3s ease-in-out;
+  }
+  ul.drop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Membagi menjadi 2 kolom */
+    list-style-type: none;
+    gap: 10px; /* Jarak antar item */
+  }
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    backdrop-filter: blur(16px);
+    z-index: -1; /* Pastikan berada di belakang konten navbar */
+  }
+  footer ul {
+    list-style: disc;
+  }
+  footer li {
+    margin-left: 20px;
+    color: #888888;
+  }
+  .bot {
+    color: #888888;
+  }
+  /* src/index.css */
+  .fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+}
