@@ -2,13 +2,13 @@
 import { useParams } from 'react-router-dom';
 import Swebdev from './Swebdev';
 import Swebmain from './Swebmain';
-import Sappdev from './Sappdev';
+import Sitsup from './Sitsup';
 import S3party from './S3party';
 
 const serviceComponents = {
   'web-main': Swebmain,
   'web-dev': Swebdev,
-  'app-dev': Sappdev,
+  'app-dev': Sitsup,
   'ai-solution': S3party,
 };
 

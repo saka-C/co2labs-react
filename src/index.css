@@ -63,8 +63,12 @@
   .shadow-custom-drop {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.09);
   }
-  .backdrop{
-    background-image: url("/images/backdrop.png"); 
+  .com{
+    background-image: url("/images/com.png"); 
+    background-size: cover;
+    background-position: center;
+    width: 100px;
+    height: 100px;
   }
   .truncate-multiline {
     display: -webkit-box;
@@ -127,5 +131,8 @@
   .fade-in {
     opacity: 1;
     transition: opacity 0.5s ease;
+  }
+  .bg-custom-gradient {
+    background: linear-gradient(180deg, #405D74 0%, #153147 100%);
   }
 }
