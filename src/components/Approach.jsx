@@ -2,7 +2,7 @@ const Approach = () => {
   return (
     <section className="xl:h-screen h-full flex flex-col items-center gap-10">
       <h1 className="">ACE</h1>
-      <h4 className="-mt-10">Methodology for Strategic Consulting</h4>
+      <h4 className="-mt-10 text-center">Methodology for Strategic Consulting</h4>
       <div className="w-full">
         <div className="parent cursor-pointer lg:inline-block lg:w-1/3 bg-secondary-500 p-10 group align-top transition duration-300 ease-in-out">
           <h3>Assessment</h3>

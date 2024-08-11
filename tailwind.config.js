@@ -64,7 +64,7 @@ export default {
           900: "#070707"
         },
         bgbase: "#F9F8F6",
-        yellow: "#FFD757"
+        yel: "#FFD757"
 
       }
     },

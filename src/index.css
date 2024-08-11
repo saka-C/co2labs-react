@@ -16,7 +16,7 @@
     src: url("/fonts/GeneralSans-Bold.woff") format("woff");
   }
   html {
-    scroll-behavior: initial;
+    scroll-behavior: smooth;
     font-family: "generalsans-medium";
   }
   html::-webkit-scrollbar {
@@ -108,8 +108,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: inherit;
-    backdrop-filter: blur(16px);
+    background: #F9F8F6;
     z-index: -1; /* Pastikan berada di belakang konten navbar */
   }
   footer ul {
@@ -135,4 +134,9 @@
   .bg-custom-gradient {
     background: linear-gradient(180deg, #405D74 0%, #153147 100%);
   }
+  .col{
+    width: 50%;
+  }
+  .col-left{height: 100%;}
+  .col-right{width: 50%;}
 }

@@ -4,7 +4,7 @@ import TeamProfile from "./TeamProfile";
 const About = () => {
   return (
     <>
-      <section className="h-screen flex items-center mb-40">
+      <section className="h-screen flex items-center mb-40" id="about">
         <div className="lg:flex lg:mx-28 mx-10 gap-20">
           <div className="lg:text-right flex flex-col lg:items-end items-center justify-center lg:w-1/2 gap-11">
             <h1 data-aos="fade-up" data-aos-delay="0" data-aos-easing="ease-in-out">About Us</h1>
@@ -23,7 +23,7 @@ const About = () => {
               >
                 <path
                   d="M10 71C105.403 30.6415 216.971 18.3204 319.353 25.5889C340.732 27.1067 361.503 31.7555 382.443 36.2074C415.148 43.1605 446.712 48.5625 480.309 48.2568C556.077 47.5674 627.671 31.4361 700 10"
-                  stroke="#F3E26B"
+                  stroke="#EDEAE3"
                   strokeWidth="20"
                   strokeLinecap="round"
                 />

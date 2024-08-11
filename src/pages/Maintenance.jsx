@@ -1,14 +1,14 @@
 import Backbutton from "../components/Backbutton";
 
-const Notfound = () => {
+const Maintenance = () => {
     return(
         <section className="text-primary-500 flex flex-col items-center justify-center h-screen gap-5">
             <div>
                 <img src="/images/logo.png" alt="brand-logo" className="w-20" />
             </div>
-            <h4>Something’s missing.</h4>
-            <h1 className="font-generalsans font-bold text-9xl">404</h1>
-            <h6 className="text-gray-400 mx-5">Sorry, we cant find that page. Youll find lots to explore on the home page.</h6>
+            <h4>Opps, We Working On It.</h4>
+            <h1 className="font-generalsans font-bold text-6xl">Under Maintenance</h1>
+            <h6 className="text-gray-400 mx-5">Sorry, this page is currently under maintenance, but you can still explore other pages</h6>
             <Backbutton />
             <div className="flex flex-wrap justify-center gap-5">
                 <a href="" className="flex items-center">
@@ -24,4 +24,4 @@ const Notfound = () => {
         </section>
     );
 };
-export default Notfound;
+export default Maintenance;

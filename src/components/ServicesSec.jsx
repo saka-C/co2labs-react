@@ -39,8 +39,8 @@ const ServicesSec = () => {
         <div className="flex flex-wrap gap-3 justify-center">
           {[
             "Website Maintenance",
-            "Website Development",
-            "App Development",
+            "Website & App Development",
+            "IT Support",
             "3rd Party AI Solution",
           ].map((service, index) => (
             <div
@@ -48,9 +48,7 @@ const ServicesSec = () => {
               className="card rounded-xl shadow-custom-drop bg-white h-96 w-72 p-7 flex flex-col items-center justify-center"
               ref={(el) => (cardsRef.current[index] = el)}
             >
-              <div
-                className= "bg-accent-100 w-20 h-20 flex justify-center items-center rounded-full mb-5"
-              >
+              <div className="bg-accent-100 w-20 h-20 flex justify-center items-center rounded-full mb-5">
                 {index === 0 && (
                   <svg
                     width="31"
@@ -81,14 +79,14 @@ const ServicesSec = () => {
                 )}
                 {index === 2 && (
                   <svg
-                    width="27"
-                    height="41"
-                    viewBox="0 0 27 41"
+                    width="38"
+                    height="40"
+                    viewBox="0 0 38 40"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M0.6875 5.125C0.6875 3.76577 1.22745 2.4622 2.18858 1.50108C3.1497 0.539954 4.45327 0 5.8125 0L21.1875 0C22.5467 0 23.8503 0.539954 24.8114 1.50108C25.7725 2.4622 26.3125 3.76577 26.3125 5.125V35.875C26.3125 37.2342 25.7725 38.5378 24.8114 39.4989C23.8503 40.46 22.5467 41 21.1875 41H5.8125C4.45327 41 3.1497 40.46 2.18858 39.4989C1.22745 38.5378 0.6875 37.2342 0.6875 35.875V5.125ZM16.0625 33.3125C16.0625 32.6329 15.7925 31.9811 15.312 31.5005C14.8314 31.02 14.1796 30.75 13.5 30.75C12.8204 30.75 12.1686 31.02 11.688 31.5005C11.2075 31.9811 10.9375 32.6329 10.9375 33.3125C10.9375 33.9921 11.2075 34.6439 11.688 35.1245C12.1686 35.605 12.8204 35.875 13.5 35.875C14.1796 35.875 14.8314 35.605 15.312 35.1245C15.7925 34.6439 16.0625 33.9921 16.0625 33.3125Z"
+                      d="M33 2C30.242 2 28 4.242 28 7C28 7.714 28.156 8.392 28.428 9.01L24.518 13.408C23.23 12.524 21.678 12 20 12C18.52 12 17.152 12.432 15.962 13.132L11.414 8.586L11.368 8.632C11.76 7.836 12 6.95 12 6C12 2.686 9.314 0 6 0C2.686 0 0 2.686 0 6C0 9.314 2.686 12 6 12C6.95 12 7.834 11.76 8.632 11.368L8.586 11.414L13.134 15.96C12.43 17.152 12 18.522 12 20C12 21.994 12.76 23.798 13.97 25.202L8.816 30.354C8.252 30.132 7.642 30 7 30C4.244 30 2 32.242 2 35C2 37.758 4.244 40 7 40C9.756 40 12 37.758 12 35C12 34.358 11.868 33.748 11.646 33.182L17.322 27.506C18.164 27.806 19.056 28 20 28C24.412 28 28 24.412 28 20C28 18.728 27.674 17.542 27.144 16.472L31.378 11.706C31.89 11.882 32.43 12 33 12C35.758 12 38 9.758 38 7C38 4.242 35.758 2 33 2ZM20 24C17.794 24 16 22.206 16 20C16 17.794 17.794 16 20 16C22.206 16 24 17.794 24 20C24 22.206 22.206 24 20 24Z"
                       fill="#153147"
                     />
                   </svg>
@@ -108,18 +106,18 @@ const ServicesSec = () => {
                   </svg>
                 )}
               </div>
-              <h5>{service}</h5>
+              <h5 className="text-center">{service}</h5>
               <span className="text-center my-5">
                 {service === "Website Maintenance" &&
                   "Keep your website running smoothly and securely with our comprehensive maintenance services. Prevent downtime,.."}
-                {service === "Website Development" &&
+                {service === "Website & App Development" &&
                   "Transform your online presence with our custom website design solutions. From stunning visuals to seamless.."}
-                {service === "App Development" &&
-                  "Bring your app idea to life with our expert development team. Whether its cross-platform, native, or progressive web.."}
+                {service === "IT Support" &&
+                  "Experience peace of mind with our reliable IT support services. From troubleshooting to server maintenance.."}
                 {service === "3rd Party AI Solution" &&
                   "Leverage our expertise to find the best third-party services for your business. From hosting to plugins, we provid.."}
               </span>
-              <Linkcomp href="#" text="View More" />
+              <Linkcomp href="404" text="View More" />
             </div>
           ))}
         </div>

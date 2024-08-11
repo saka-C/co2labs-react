@@ -38,16 +38,16 @@ const Sidebar = ({ className = '' }) => {
             <Menu as="div">
               <h5 className='bg-gray-100 p-3 mb-2 rounded-lg hover:underline'>Our Services</h5>
               <ul className='list-disc leading-8'>
-                <li className='ml-5 my-3 underline'><a href="#">Website Maintenance</a></li>
-                <li className='ml-5 my-3 underline'><a href="#">Website Development</a></li>
-                <li className='ml-5 my-3 underline'><a href="#">App Development</a></li>
-                <li className='ml-5 my-3 underline'><a href="#">3rd Party AI Solution</a></li>
+                <li className='ml-5 my-3 underline'><a href="/service/web-main">Website Maintenance</a></li>
+                <li className='ml-5 my-3 underline'><a href="/service/web-dev">Website & App Development</a></li>
+                <li className='ml-5 my-3 underline'><a href="/service/it-support">IT Support</a></li>
+                <li className='ml-5 my-3 underline'><a href="/service/ai-solution">3rd Party AI Solution</a></li>
               </ul>
               <h5 className='bg-gray-100 p-3 mb-2 rounded-lg hover:underline'><a href="#">About Us</a></h5>
               <h5 className='bg-gray-100 p-3 mb-2 rounded-lg hover:underline'><a href="#">Portfolio</a></h5>
               <h5 className='bg-gray-100 p-3 mb-2 rounded-lg hover:underline'><a href="#">Contact Us</a></h5>
             </Menu>
-            <Button text="Get Started Today!" className='text-black w-full py-3 mt-5'/>
+            <Button text="Get Started Today!" className='text-bgbase w-full py-3 mt-5'/>
           </nav>
         </aside>
       </Transition>

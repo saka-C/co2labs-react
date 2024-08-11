@@ -5,14 +5,14 @@ const Footer = () => {
         <div className="flex flex-col justify-between">
           <h3>Let’s Grow With CO2 Labs</h3>
           <div className="flex flex-col gap-5">
-            <h5>Get exclusive Update From Us</h5>
+            <h5>Get Exclusive Updates From Us</h5>
             <div className="flex">
               <input
                 type="text"
                 placeholder="Yourmail@example.com"
                 className="py-2 px-5 sm:w-auto w-full rounded-l-full"
               />
-              <button className="bg-yellow py-2 px-5 rounded-r-full font-semibold text-black">
+              <button className="bg-yel py-2 px-5 rounded-r-full font-semibold text-black">
                 Subscribe
               </button>
             </div>
