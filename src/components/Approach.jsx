@@ -1,9 +1,10 @@
 const Approach = () => {
   return (
     <section className="xl:h-screen h-full flex flex-col items-center gap-10">
-      <h2 className="">Our Approach</h2>
+      <h1 className="">ACE</h1>
+      <h4 className="-mt-10">Methodology for Strategic Consulting</h4>
       <div className="w-full">
-        <div className="parent cursor-pointer lg:inline-block lg:w-1/3 bg-primary-500 p-10 group align-top transition duration-300 ease-in-out">
+        <div className="parent cursor-pointer lg:inline-block lg:w-1/3 bg-secondary-500 p-10 group align-top transition duration-300 ease-in-out">
           <h3>Assessment</h3>
           <h6>& Insight Gathering</h6>
           <div className="group-hover:block mt-2 hidden opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -33,7 +34,7 @@ const Approach = () => {
             >
               <path
                 d="M56 20L29.5 3L3 20"
-                stroke="#5DCA96"
+                stroke="#ADB8BA"
                 strokeWidth="5"
                 strokeMiterlimit="10"
                 strokeLinecap="round"
@@ -42,7 +43,7 @@ const Approach = () => {
             </svg>
           </div>
         </div>
-        <div className="parent cursor-pointer lg:inline-block lg:w-1/3 bg-yellow-200 p-10 group align-top transition duration-300 ease-in-out">
+        <div className="parent cursor-pointer lg:inline-block lg:w-1/3 bg-accent-500 p-10 group align-top transition duration-300 ease-in-out">
           <h3>Customization</h3>
           <h6>& Strategic Planning</h6>
           <div className="group-hover:block mt-2 hidden opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -69,7 +70,7 @@ const Approach = () => {
             >
               <path
                 d="M56 20L29.5 3L3 20"
-                stroke="#c2b556"
+                stroke="#EDEAE3"
                 strokeWidth="5"
                 strokeMiterlimit="10"
                 strokeLinecap="round"
@@ -78,7 +79,7 @@ const Approach = () => {
             </svg>
           </div>
         </div>
-        <div className="parent cursor-pointer lg:inline-block lg:w-1/3 bg-red-200 p-10 group align-top transition duration-300 ease-in-out">
+        <div className="parent cursor-pointer lg:inline-block lg:w-1/3 bg-secondary-500 p-10 group align-top transition duration-300 ease-in-out">
           <h3>Execution</h3>
           <h6>& Lifecycle Management</h6>
           <div className="group-hover:block mt-2 hidden opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -105,7 +106,7 @@ const Approach = () => {
             >
               <path
                 d="M56 20L29.5 3L3 20"
-                stroke="#cb5043"
+                stroke="#ADB8BA"
                 strokeWidth="5"
                 strokeMiterlimit="10"
                 strokeLinecap="round"

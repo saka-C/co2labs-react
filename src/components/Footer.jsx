@@ -12,7 +12,7 @@ const Footer = () => {
                 placeholder="Yourmail@example.com"
                 className="py-2 px-5 sm:w-auto w-full rounded-l-full"
               />
-              <button className="bg-primary-500 py-2 px-5 rounded-r-full font-semibold text-black">
+              <button className="bg-yellow py-2 px-5 rounded-r-full font-semibold text-black">
                 Subscribe
               </button>
             </div>

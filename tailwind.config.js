@@ -17,7 +17,7 @@ export default {
         orbitron: ['Orbitron', 'sans-serif'],
         generalsans: ['generalsans-medium', 'generalsans-semibold', 'generalsans-bold', 'sans-serif'],
       },
-      colors : {
+      colors: {
         primary: {
           100: "#d0d6da",
           200: "#a1adb5",
@@ -28,30 +28,30 @@ export default {
           700: "#0d1d2b",
           800: "#08141c",
           900: "#040a0e"
-},
-secondary: {
-    100: "#fbfbf9",
-    200: "#f8f7f4",
-    300: "#f4f2ee",
-    400: "#f1eee9",
-    500: "#edeae3",
-    600: "#bebbb6",
-    700: "#8e8c88",
-    800: "#5f5e5b",
-    900: "#2f2f2d"
-},
-accent: {
-    100: "#eff1f1",
-    200: "#dee3e3",
-    300: "#ced4d6",
-    400: "#bdc6c8",
-    500: "#adb8ba",
-    600: "#8a9395",
-    700: "#686e70",
-    800: "#454a4a",
-    900: "#232525"
-},
-        
+        },
+        secondary: {
+          100: "#fbfbf9",
+          200: "#f8f7f4",
+          300: "#f4f2ee",
+          400: "#f1eee9",
+          500: "#edeae3",
+          600: "#bebbb6",
+          700: "#8e8c88",
+          800: "#5f5e5b",
+          900: "#2f2f2d"
+        },
+        accent: {
+          100: "#eff1f1",
+          200: "#dee3e3",
+          300: "#ced4d6",
+          400: "#bdc6c8",
+          500: "#adb8ba",
+          600: "#8a9395",
+          700: "#686e70",
+          800: "#454a4a",
+          900: "#232525"
+        },
+
         dark: {
           100: "#d3d3d3",
           200: "#a7a7a8",
@@ -64,7 +64,8 @@ accent: {
           900: "#070707"
         },
         bgbase: "#F9F8F6",
-        
+        yellow: "#FFD757"
+
       }
     },
   },

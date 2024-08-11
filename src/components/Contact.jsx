@@ -66,7 +66,7 @@ const Contact = () => {
             className="px-8 py-3 rounded-lg bg-gray-200 w-full h-24"
             placeholder="Ask Our About Services"
           ></textarea>
-          <Button className="bg-secondary-500 block self-start" text="send" />
+          <Button className="bg-yellow text-black block self-start" text="send" />
         </form>
         <div className="lg:w-1/2">
           <iframe

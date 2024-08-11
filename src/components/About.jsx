@@ -4,8 +4,7 @@ import TeamProfile from "./TeamProfile";
 const About = () => {
   return (
     <>
-      <div className="wave top-0 rotate-180"></div>
-      <section className="h-full flex items-center mb-40">
+      <section className="h-screen flex items-center mb-40">
         <div className="lg:flex lg:mx-28 mx-10 gap-20">
           <div className="lg:text-right flex flex-col lg:items-end items-center justify-center lg:w-1/2 gap-11">
             <h1 data-aos="fade-up" data-aos-delay="0" data-aos-easing="ease-in-out">About Us</h1>

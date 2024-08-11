@@ -1,8 +1,8 @@
 const Portfolio = () => {
   return (
-    <section className="bg-primary-500 lg:px-28 px-10 py-20 mt-20">
+    <section className="bg-primary-500 lg:px-28 px-10 py-20 mt-20 text-bgbase">
       <h1>Our Portfolio</h1>
-      <h6 className="mb-10 mt-5">
+      <h6 className="mb-10 mt-5 ">
         Lorem ipsum dolor sit amet consectetur. Et semper ac risus tincidunt.
       </h6>
       <div className="flex flex-wrap lg:justify-between justify-center gap-7">

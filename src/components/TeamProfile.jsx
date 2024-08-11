@@ -4,10 +4,10 @@ const TeamProfile = () => {
       <div className="flex justify-between lg:mb-32 mb-20 lg:mx-0 mx-10">
         <h1>Our Team</h1>
         <div className="flex gap-3">
-          <button className="border-4 border-accent-500 text-accent-500 text-5xl h-16 w-16 flex justify-center items-center rounded-full">
+          <button className="border-4 border-primary-500 text-primary-500 text-5xl h-16 w-16 flex justify-center items-center rounded-full">
             <i className="bx bx-left-arrow-alt"></i>
           </button>
-          <button className="bg-primary-500 text-5xl h-16 w-16 flex justify-center items-center rounded-full">
+          <button className="bg-primary-500 text-bgbase text-5xl h-16 w-16 flex justify-center items-center rounded-full">
             <i className="bx bx-right-arrow-alt"></i>
           </button>
         </div>
