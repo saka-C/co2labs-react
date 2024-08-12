@@ -15,11 +15,11 @@ const Headerpages = ({ image='', title, desc }) => {
             <div className="lg:order-2 flex justify-end items-center ">
               <img
                 src={`/images/${image}.png`}
-                className="lg:w-96 w-3/5 absolute md:right-40 right-20 rounded-xl shadow-md"
+                className="lg:w-96 sm:w-1/2 w-2/3 absolute md:right-40 right-20 rounded-xl shadow-md"
               />
               <img
                 src="/images/backdrop.png"
-                className="-z-10 lg:w-[400px] w-3/5 lg:absolute right-0"
+                className="-z-10 lg:w-[400px] sm:w-1/2 w-2/3 lg:absolute right-0"
               />
             </div>
             <div className="lg:w-2/3 lg:mr-0 mr-10 lg:order-1   ">

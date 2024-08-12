@@ -15,8 +15,8 @@ const Header = () => {
         <div className="lg:ml-28 ml-10 w-full">
           <div className="lg:flex items-center justify-between box-border lg:w-2/3">
             <div className="lg:order-2 flex justify-end items-center ">
-              <img src="/images/heroimg.png" className="lg:w-96 w-1/2 absolute md:right-40 right-20 rounded-xl shadow-md" />
-              <img src="/images/backdrop.png" className="-z-10 lg:w-[400px] w-1/2 lg:absolute right-0"/>
+              <img src="/images/heroimg.png" className="lg:w-96 sm:w-1/2 w-2/3 absolute md:right-40 right-20 rounded-xl shadow-md" />
+              <img src="/images/backdrop.png" className="-z-10 lg:w-[400px] sm:w-1/2 w-2/3 lg:absolute right-0"/>
             </div>
             <div className="lg:w-2/3 lg:mr-0 mr-10 lg:order-1">
               <h1

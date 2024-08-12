@@ -11,7 +11,13 @@ const RouteGuard = ({ element, maintenancePages }) => {
     return <Maintenance />;
   }
 
+
+  console.log('Current path:', location.pathname);
+
+
   return element;
+
+
 };
 
 export default RouteGuard;

@@ -35,9 +35,9 @@ const Navbar = () => {
           isScrolled ? "shadow-custom-drop" : "bg-transparent"
         }`}
       >
-        <div className="order-1">
+        <a href="/" className="order-1">
           <img src="/images/logo.png" alt="logo" className="w-16" />
-        </div>
+        </a>
         <ul className="order-2 lg:flex gap-10 hidden">
           <li className="relative group">
             <a

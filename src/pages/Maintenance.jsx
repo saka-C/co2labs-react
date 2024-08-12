@@ -7,7 +7,7 @@ const Maintenance = () => {
                 <img src="/images/logo.png" alt="brand-logo" className="w-20" />
             </div>
             <h4>Opps, We Working On It.</h4>
-            <h1 className="font-generalsans font-bold text-6xl">Under Maintenance</h1>
+            <h1 className="font-generalsans font-bold sm:text-6xl text-4xl mx-5">Under Maintenance</h1>
             <h6 className="text-gray-400 mx-5">Sorry, this page is currently under maintenance, but you can still explore other pages</h6>
             <Backbutton />
             <div className="flex flex-wrap justify-center gap-5">
