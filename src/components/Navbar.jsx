@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import Button from "./Button";
 import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
@@ -27,6 +28,23 @@ const Navbar = () => {
     };
   }, []);
 
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavigation = (sectionId) => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        document
+          .getElementById(sectionId)
+          .scrollIntoView({ behavior: "smooth" });
+      }, 0);
+    } else {
+      document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <SmoothScrollNav />
@@ -40,13 +58,13 @@ const Navbar = () => {
         </a>
         <ul className="order-2 lg:flex gap-10 hidden">
           <li className="relative group">
-            <a
+            <button
               href=""
               className="font-generalsans font-medium text-xl flex items-center"
             >
               Our Services
               <i className="bx bx-chevron-down ml-2 transform transition-transform duration-300 ease-in-out group-hover:rotate-180 arrow-icon"></i>
-            </a>
+            </button>
             <div className="absolute left-0  bg-white border-gray-200 border-[1px] shadow-custom-drop rounded-lg hidden opacity-0 group-hover:opacity-100 group-hover:block transition-all duration-300 ease-in-out">
               <ul className="drop p-2">
                 <li>
@@ -163,21 +181,15 @@ const Navbar = () => {
               </ul>
             </div>
           </li>
-          <li>
-            <a href="#about" className="font-generalsans font-medium text-xl">
+          <button onClick={() => handleNavigation("about")} className="font-generalsans font-medium text-xl">
               About Us
-            </a>
-          </li>
-          <li>
-            <a href="#portfolio" className="font-generalsans font-medium text-xl">
+          </button>
+          <button onClick={() => handleNavigation("portfolio")} className="font-generalsans font-medium text-xl">
               Portfolio
-            </a>
-          </li>
-          <li>
-            <a href="#contact" className="font-generalsans font-medium text-xl">
-              Contact Us
-            </a>
-          </li>
+          </button>
+          <button onClick={() => handleNavigation("contact")} className="font-generalsans font-medium text-xl">
+              Contact
+          </button>
         </ul>
         <Button
           className="order-3 md:block hidden hover:scale-110 transition-all hover:shadow-primary-600 hover:shadow-md"

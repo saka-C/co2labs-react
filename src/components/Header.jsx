@@ -9,24 +9,34 @@ const Header = () => {
   useEffect(() => {
     AOS.init();
   }, []);
+
   return (
     <>
       <header className="h-screen flex justify-between items-center">
         <div className="lg:ml-28 ml-10 w-full">
           <div className="lg:flex items-center justify-between box-border lg:w-2/3">
             <div className="lg:order-2 flex justify-end items-center ">
-              <img src="/images/heroimg.png" className="lg:w-96 sm:w-1/2 w-2/3 absolute md:right-40 right-20 rounded-xl shadow-md" />
-              <img src="/images/backdrop.png" className="-z-10 lg:w-[400px] sm:w-1/2 w-2/3 lg:absolute right-0"/>
+              <img
+                src="/images/heroimg.png"
+                data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+                className="lg:w-96 sm:w-1/2 w-2/3 absolute md:right-40 right-20 rounded-xl shadow-md"
+              />
+              <img
+                src="/images/backdrop.png"
+                className="-z-10 lg:w-[400px] sm:w-1/2 w-2/3 lg:absolute right-0"
+              />
             </div>
             <div className="lg:w-2/3 lg:mr-0 mr-10 lg:order-1">
               <h1
                 data-aos="fade-right"
                 data-aos-offset="300"
                 data-aos-easing="ease-in-sine"
-                className="sm:text-5xl text-3xl"
+                className="sm:text-5xl text-3xl sm:flex flex-col items-start"
               >
                 Where Code Meets{" "}
-                <span className="font-orbitron font-bold sm:text-5xl text-3xl  bg-primary-500 text-bgbase">
+                <span className="font-orbitron font-bold sm:text-5xl text-3xl  bg-primary-500 text-bgbase px-5">
                   Creativity
                 </span>
               </h1>

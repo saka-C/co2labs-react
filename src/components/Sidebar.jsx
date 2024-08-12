@@ -54,9 +54,12 @@ const Sidebar = ({ className = "" }) => {
           </button>
           <nav>
             <Menu as="div">
-              <h5 className="bg-gray-100 p-3 mb-2 rounded-lg hover:underline">
+              <button
+                className="bg-gray-100 p-3 mb-2 rounded-lg w-full text-start hover:underline"
+                onClick={() => handleNavigation("service")}
+              >
                 Our Services
-              </h5>
+              </button>
               <ul className="list-disc leading-8">
                 <li className="ml-5 my-3 underline">
                   <a href="/service/web-main">Website Maintenance</a>
@@ -71,24 +74,24 @@ const Sidebar = ({ className = "" }) => {
                   <a href="/service/ai-solution">3rd Party AI Solution</a>
                 </li>
               </ul>
-              <h5
-                className="bg-gray-100 p-3 mb-2 rounded-lg hover:underline"
+              <button
+                className="bg-gray-100 p-3 mb-2 rounded-lg w-full text-start hover:underline"
                 onClick={() => handleNavigation("about")}
               >
                 About Us
-              </h5>
-              <h5
-                className="bg-gray-100 p-3 mb-2 rounded-lg hover:underline"
+              </button>
+              <button
+                className="bg-gray-100 p-3 mb-2 rounded-lg w-full text-start hover:underline"
                 onClick={() => handleNavigation("portfolio")}
               >
                 Portfolio
-              </h5>
-              <h5
-                className="bg-gray-100 p-3 mb-2 rounded-lg hover:underline"
+              </button>
+              <button
+                className="bg-gray-100 p-3 mb-2 rounded-lg w-full text-start hover:underline"
                 onClick={() => handleNavigation("contact")}
               >
                 Contact Us
-              </h5>
+              </button>
             </Menu>
             <Button
               text="Get Started Today!"

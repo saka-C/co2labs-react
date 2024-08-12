@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 // eslint-disable-next-line react/prop-types
-const Headerpages = ({ image='', title, desc }) => {
+const Headerpages = ({ image = "", title, desc }) => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -14,6 +14,9 @@ const Headerpages = ({ image='', title, desc }) => {
           <div className="lg:flex items-center justify-between box-border lg:w-2/3">
             <div className="lg:order-2 flex justify-end items-center ">
               <img
+                data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
                 src={`/images/${image}.png`}
                 className="lg:w-96 sm:w-1/2 w-2/3 absolute md:right-40 right-20 rounded-xl shadow-md"
               />
@@ -26,7 +29,7 @@ const Headerpages = ({ image='', title, desc }) => {
               <div className="com -mb-11 -ml-11"></div>
               <h1
                 data-aos="fade-right"
-                data-aos-offset="300"
+                data-aos-offset="50"
                 data-aos-easing="ease-in-sine"
                 className="sm:text-5xl text-3xl"
               >
@@ -34,7 +37,7 @@ const Headerpages = ({ image='', title, desc }) => {
               </h1>
               <h6
                 data-aos="fade-right"
-                data-aos-offset="200"
+                data-aos-offset="100"
                 data-aos-easing="ease-in-sine"
                 className="my-5"
               >

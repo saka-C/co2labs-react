@@ -1,6 +1,6 @@
 const TeamProfile = () => {
   return (
-    <section className="lg:mx-28 lg:my-0 my-20 flex flex-col justify-center">
+    <section className="lg:mx-28 lg:my-0 my-20 flex flex-col justify-center" id="team">
       <div className="flex justify-between lg:mb-32 mb-20 lg:mx-0 mx-10">
         <h1>Our Team</h1>
         <div className="flex gap-3">

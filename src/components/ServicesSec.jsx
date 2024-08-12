@@ -33,41 +33,41 @@ const ServicesSec = () => {
   }, []);
 
   return (
-    <section className="bg-primary-500 flex items-center justify-center py-40">
-  <div className="flex flex-col gap-5">
-    <h1 className="text-center xl:text-left text-bgbase">Our Services</h1>
-    <div className="flex flex-wrap gap-3 justify-center">
-      {[
-        {
-          name: "Website Maintenance",
-          link: "/service/web-main",
-          description:
-            "Keep your website running smoothly and securely with our comprehensive maintenance services. Prevent downtime,..",
-        },
-        {
-          name: "Website & App Development",
-          link: "/service/web-dev",
-          description:
-            "Transform your online presence with our custom website design solutions. From stunning visuals to seamless..",
-        },
-        {
-          name: "IT Support",
-          link: "/service/it-support",
-          description:
-            "Experience peace of mind with our reliable IT support services. From troubleshooting to server maintenance..",
-        },
-        {
-          name: "3rd Party AI Solution",
-          link: "/service/ai-solution",
-          description:
-            "Leverage our expertise to find the best third-party services for your business. From hosting to plugins, we provid..",
-        },
-      ].map((service, index) => (
-        <div
-          key={index}
-          className="card rounded-xl shadow-custom-drop bg-white h-96 w-72 p-7 flex flex-col items-center justify-center"
-          ref={(el) => (cardsRef.current[index] = el)}
-        >
+    <section className="bg-primary-500 flex items-center justify-center py-40" id="service">
+      <div className="flex flex-col gap-5">
+        <h1 className="sm:text-center xl:text-left text-bgbase sm:mx-0 mx-10">Our Services</h1>
+        <div className="flex flex-wrap gap-3 justify-center">
+          {[
+            {
+              name: "Website Maintenance",
+              link: "/service/web-main",
+              description:
+                "Keep your website running smoothly and securely with our comprehensive maintenance services. Prevent downtime,..",
+            },
+            {
+              name: "Website & App Development",
+              link: "/service/web-dev",
+              description:
+                "Transform your online presence with our custom website design solutions. From stunning visuals to seamless..",
+            },
+            {
+              name: "IT Support",
+              link: "/service/it-support",
+              description:
+                "Experience peace of mind with our reliable IT support services. From troubleshooting to server maintenance..",
+            },
+            {
+              name: "3rd Party AI Solution",
+              link: "/service/ai-solution",
+              description:
+                "Leverage our expertise to find the best third-party services for your business. From hosting to plugins, we provid..",
+            },
+          ].map((service, index) => (
+            <div
+              key={index}
+              className="card rounded-xl shadow-custom-drop bg-white h-96 w-72 p-7 flex flex-col items-center justify-center"
+              ref={(el) => (cardsRef.current[index] = el)}
+            >
               <div className="bg-accent-100 w-20 h-20 flex justify-center items-center rounded-full mb-5">
                 {index === 0 && (
                   <svg
@@ -126,18 +126,14 @@ const ServicesSec = () => {
                   </svg>
                 )}
               </div>
-          <h5 className="text-center">{service.name}</h5>
-          <span className="text-center my-5">
-            {service.description}
-          </span>
-          <Linkcomp href={service.link} text="View More" />
+              <h5 className="text-center">{service.name}</h5>
+              <span className="text-center my-5">{service.description}</span>
+              <Linkcomp href={service.link} text="View More" />
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-
+      </div>
+    </section>
   );
 };
 

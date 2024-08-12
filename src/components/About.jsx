@@ -7,13 +7,28 @@ const About = () => {
       <section className="h-screen flex items-center mb-40" id="about">
         <div className="lg:flex lg:mx-28 mx-10 gap-20">
           <div className="lg:text-right flex flex-col lg:items-end items-center justify-center lg:w-1/2 gap-11">
-            <h1 data-aos="fade-up" data-aos-delay="0" data-aos-easing="ease-in-out">About Us</h1>
-            <h6 data-aos="fade-up" data-aos-delay="50" data-aos-easing="ease-in-out">
+            <h1
+              data-aos="fade-up"
+              data-aos-offset="0"
+              data-aos-anchor-placement="bottom-bottom"
+            >
+              About Us
+            </h1>
+            <h6
+              data-aos="fade-up"
+              data-aos-offset="50"
+              data-aos-anchor-placement="bottom-bottom"
+            >
               At CO2 Labs, we strive to provide simple yet powerful software
               solutions and expert consultation to help your business thrive in
               the digital world.
             </h6>
-            <div className="line-wave" data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out">
+            <div
+              className="line-wave"
+              data-aos="fade-up"
+              data-aos-offset="100"
+              data-aos-anchor-placement="bottom-bottom"
+            >
               <svg
                 className="xl:w-[600px] w-full"
                 height="81"
@@ -30,7 +45,12 @@ const About = () => {
               </svg>
             </div>
           </div>
-          <div className="flex justify-center items-center lg:w-1/2" data-aos="fade-up" data-aos-delay="150" data-aos-easing="ease-in-out">
+          <div
+            className="flex justify-center items-center lg:w-1/2"
+            data-aos="fade-up"
+            data-aos-delay="150"
+            data-aos-easing="ease-in-out"
+          >
             <img src="/images/about-img.png" alt="About img" />
           </div>
         </div>

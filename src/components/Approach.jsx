@@ -1,6 +1,6 @@
 const Approach = () => {
   return (
-    <section className="xl:h-screen h-full flex flex-col items-center gap-10">
+    <section className="xl:h-screen h-full flex flex-col items-center gap-10" id="approach">
       <h1 className="">ACE</h1>
       <h4 className="-mt-10 text-center">Methodology for Strategic Consulting</h4>
       <div className="w-full">

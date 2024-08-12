@@ -48,6 +48,10 @@ const ContainerAdvantage = ({children}) => {
           </div>
 
           <div className="lg:col lg:col-right">
+            <div className="mb-10 flex gap-2 lg:hidden block">
+              <div className="bg-primary-500 w-2"></div>
+              <h2>OUR ADVANTAGES</h2>
+            </div>
             {children}
           </div>
         </div>

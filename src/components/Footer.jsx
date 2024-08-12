@@ -1,4 +1,21 @@
+import { useNavigate, useLocation } from "react-router-dom";
 const Footer = () => {
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavigation = (sectionId) => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        document
+          .getElementById(sectionId)
+          .scrollIntoView({ behavior: "smooth" });
+      }, 0);
+    } else {
+      document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <footer className="bg-dark-700 lg:px-28 px-10 text-white pt-20 pb-10">
       <div className="lg:flex lg:justify-between">
@@ -22,31 +39,28 @@ const Footer = () => {
           <ul>
             <h6>Services</h6>
             <li>
-              <a href="#">Web Maintenance</a>
+              <a href="/service/web-main">Web Maintenance</a>
             </li>
             <li>
-              <a href="#">Web Design</a>
+              <a href="/service/web-dev">Web & App Development</a>
             </li>
             <li>
-              <a href="#">App Development</a>
+              <a href="/service/it-support">IT Service</a>
             </li>
             <li>
-              <a href="#">IT Service</a>
-            </li>
-            <li>
-              <a href="#">3rd Party AI Solution</a>
+              <a href="/service/ai-solution">3rd Party AI Solution</a>
             </li>
           </ul>
           <ul>
             <h6>About</h6>
             <li>
-              <a href="#">Our Approach</a>
+              <button onClick={() => handleNavigation("approach")}>Our Approach</button>
             </li>
             <li>
-              <a href="#">Our Team</a>
+              <button onClick={() => handleNavigation("team")}>Our Team</button>
             </li>
             <li>
-              <a href="#">Portfolio</a>
+              <button onClick={() => handleNavigation("portfolio")}>Our Portfolio</button>
             </li>
           </ul>
           <ul>
