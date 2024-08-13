@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Service from "./pages/Services";
 import Notfound from "./pages/Notfound";
 import RouteGuard from "./pages/RouteGuard";
+import HasSendMail from "./pages/HasSendMail";
 
 function App() {
   const maintenancePages = ["/service/ai-solution"];
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<RouteGuard element={<Home />} maintenancePages={maintenancePages} />}  />
         <Route path="/service/:serviceId" element={<RouteGuard element={<Service />} maintenancePages={maintenancePages} />}/>
+        <Route path="/hassendmail" element={<RouteGuard element={<HasSendMail />} maintenancePages={maintenancePages} />}  />
         <Route path="*" element={<Notfound />} />
       </Routes>
     </Router>

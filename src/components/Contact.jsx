@@ -1,6 +1,67 @@
 import Button from "./Button";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [source, setSource] = useState("");
+  const [emailError, setEmailError] = useState(""); // State untuk pesan error
+  const navigate = useNavigate();
+
+  // Fungsi untuk validasi email
+  const validateEmail = (email) => {
+    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Validasi email sebelum mengirim
+    if (!validateEmail(email)) {
+      setEmailError("Please enter a valid email address");
+      return;
+    } else {
+      setEmailError(""); // Reset error jika email valid
+    }
+
+    // Kirim email menggunakan EmailJS
+    const templateParams = {
+      name: name,
+      email: email,
+      message: message,
+      source: source,
+    };
+
+    emailjs
+      .send(
+        "service_j0wee04", // Ganti dengan Service ID Anda
+        "template_kdsys3k", // Ganti dengan Template ID Anda
+        templateParams,
+        "9rFtjMx41be85A8L2" // Public Key Anda
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          // Navigasi ke halaman lain setelah sukses mengirim email
+          navigate("/hassendmail", {
+            state: {
+              name,
+              email,
+              message,
+              source,
+            },
+          });
+        },
+        (err) => {
+          console.log("FAILED...", err);
+        }
+      );
+  };
+
   return (
     <section className="lg:mx-28 mx-10 flex flex-col gap-16 py-24" id="contact">
       <div className="md:flex justify-between">
@@ -54,7 +115,7 @@ const Contact = () => {
       </div>
       <div className="lg:flex xl:gap-24 gap-5 lg:justify-between">
         <form
-          action=""
+          onSubmit={handleSubmit}
           className="bg-white flex flex-col justify-center md:p-14 p-5 lg:w-1/2 gap-5 rounded-xl shadow-xl"
         >
           <h4>Ask us about the service you need</h4>
@@ -62,35 +123,63 @@ const Contact = () => {
             type="text"
             className="px-8 py-3 rounded-lg bg-gray-200 w-full"
             placeholder="Your Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
           />
           <input
-            type="text"
+            type="email"
             className="px-8 py-3 rounded-lg bg-gray-200 w-full"
             placeholder="Yourmail@example.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
           />
+          {emailError && <p className="text-red-500 text-sm">{emailError}</p>}
           <textarea
-            name=""
-            id=""
             className="px-8 py-3 rounded-lg bg-gray-200 w-full h-24"
             placeholder="Ask Our About Services"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
           ></textarea>
           <h5>Where You Hear About Us?</h5>
           <div className="flex flex-wrap gap-4">
             <div className="flex items-center gap-2">
-              <input type="radio" id="Linkedin" value="Linkedin" />
+              <input
+                type="radio"
+                id="Linkedin"
+                value="Linkedin"
+                checked={source === "Linkedin"}
+                onChange={(e) => setSource(e.target.value)}
+              />
               <label htmlFor="Linkedin">Linkedin</label>
             </div>
             <div className="flex items-center gap-2">
-              <input type="radio" id="Instagram" value="Instagram" />
+              <input
+                type="radio"
+                id="Instagram"
+                value="Instagram"
+                checked={source === "Instagram"}
+                onChange={(e) => setSource(e.target.value)}
+              />
               <label htmlFor="Instagram">Instagram</label>
             </div>
             <div className="flex items-center gap-2">
-              <input type="radio" id="Other" value="Other" />
+              <input
+                type="radio"
+                id="Other"
+                value="Other"
+                checked={source === "Other"}
+                onChange={(e) => setSource(e.target.value)}
+              />
               <label htmlFor="Other">Other</label>
             </div>
-
           </div>
-          <Button className="text-bgbase block self-start" text="send" />
+          <Button
+            type="submit"
+            className="text-bgbase block self-start"
+            text="Send"
+          />
         </form>
         <div className="lg:w-1/2">
           <iframe
