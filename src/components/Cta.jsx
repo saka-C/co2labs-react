@@ -1,5 +1,12 @@
 // eslint-disable-next-line react/prop-types
 const Cta = ({ image = "", desc, gototext }) => {
+  const whatsappClick = () => {
+    const phoneNumber = '62895622144623'; // Ganti dengan nomor WhatsApp kamu
+    const message = 'Hi Co2, I would like ask about your services.';
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    window.location.href = url;
+  };
   return (
     <section className="lg:mx-28 mx-10 md:h-screen flex items-center md:my-0 my-20">
       <div className="md:flex items-center">
@@ -15,7 +22,7 @@ const Cta = ({ image = "", desc, gototext }) => {
             <h6 className="lg:text-xl text-base">
               {desc}
             </h6>
-            <button className="flex items-center self-start bg-yel text-black rounded-md py-2 px-4 font-medium font-generalsans shadow-custom-drop">
+            <button onClick={whatsappClick} className="flex items-center self-start bg-yel text-black rounded-md py-2 px-4 font-medium font-generalsans shadow-custom-drop">
               {gototext}<i className="bx bx-right-arrow-alt"></i>
             </button>
           </div>

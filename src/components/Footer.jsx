@@ -1,6 +1,5 @@
 import { useNavigate, useLocation } from "react-router-dom";
 const Footer = () => {
-
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -16,6 +15,16 @@ const Footer = () => {
       document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const whatsappClick = () => {
+    const phoneNumber = "62895622144623"; // Ganti dengan nomor WhatsApp kamu
+    const message = "Hi Co2, I would like ask about your services.";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    window.location.href = url;
+  };
   return (
     <footer className="bg-dark-700 lg:px-28 px-10 text-white pt-20 pb-10">
       <div className="lg:flex lg:justify-between">
@@ -23,16 +32,16 @@ const Footer = () => {
           <h3>Let’s Grow With CO2 Labs</h3>
           <div className="flex flex-col gap-5">
             <h5>Get Exclusive Updates From Us</h5>
-            <div className="flex">
+            <form action="mailto:shaka.aufa.alhajar@gmail.com" method="post" encType="text/plain" className="flex">
               <input
                 type="text"
                 placeholder="Yourmail@example.com"
-                className="py-2 px-5 sm:w-auto w-full rounded-l-full"
+                className="py-2 px-5 sm:w-auto w-full rounded-l-full text-black"
               />
-              <button className="bg-yel py-2 px-5 rounded-r-full font-semibold text-black">
+              <button type="submit" className="bg-yel py-2 px-5 rounded-r-full font-semibold text-black">
                 Subscribe
               </button>
-            </div>
+            </form>
           </div>
         </div>
         <div className="flex xl:ml-0 lg:ml-10 flex-wrap gap-8 lg:mt-0 mt-20">
@@ -54,21 +63,25 @@ const Footer = () => {
           <ul>
             <h6>About</h6>
             <li>
-              <button onClick={() => handleNavigation("approach")}>Our Approach</button>
+              <button onClick={() => handleNavigation("approach")}>
+                Our Approach
+              </button>
             </li>
             <li>
               <button onClick={() => handleNavigation("team")}>Our Team</button>
             </li>
             <li>
-              <button onClick={() => handleNavigation("portfolio")}>Our Portfolio</button>
+              <button onClick={() => handleNavigation("portfolio")}>
+                Our Portfolio
+              </button>
             </li>
           </ul>
           <ul>
             <h6>Contact</h6>
             <li>
-              <a href="#" className="flex items-center">
+              <button onClick={whatsappClick} className="flex items-center">
                 <i className="bx bxs-phone text-2xl"></i>081-123-456
-              </a>
+              </button>
             </li>
             <li>
               <a href="#" className="flex items-center">
@@ -76,7 +89,10 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="flex items-center">
+              <a
+                href="https://maps.app.goo.gl/sXvWLYMD6nfN7pK3A"
+                className="flex items-center"
+              >
                 <i className="bx bx-map-alt text-2xl"></i>Coding Collective SG{" "}
               </a>
             </li>
@@ -86,8 +102,8 @@ const Footer = () => {
       <div className="flex justify-between mt-10 bot">
         <span>©2024 CO2 Labs. All Right Reserved</span>
         <div className="flex gap-10">
-            <span>FAQ</span>
-            <span>Terms & Policy</span>
+          <span>FAQ</span>
+          <span>Terms & Policy</span>
         </div>
       </div>
     </footer>

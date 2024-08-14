@@ -1,5 +1,4 @@
 import Button from "./Button";
-import Linkcomp from "./Linkcomp";
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect } from "react";
 import AOS from "aos";
@@ -9,6 +8,14 @@ const Header = () => {
   useEffect(() => {
     AOS.init();
   }, []);
+
+  const whatsappClick = () => {
+    const phoneNumber = '62895622144623'; // Ganti dengan nomor WhatsApp kamu
+    const message = 'Hi Co2, I would like ask about your services.';
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    window.location.href = url;
+  };
 
   return (
     <>
@@ -56,9 +63,9 @@ const Header = () => {
               >
                 <Button
                   className="hover:scale-110 transition-all hover:shadow-primary-600 hover:shadow-md"
-                  text="Get Started Today"
+                  onClick={whatsappClick}
+                  text="Get a free consult"
                 />
-                <Linkcomp href="#" text="Request a Consultation" />
               </div>
             </div>
           </div>

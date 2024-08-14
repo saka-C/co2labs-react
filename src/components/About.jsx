@@ -4,9 +4,9 @@ import TeamProfile from "./TeamProfile";
 const About = () => {
   return (
     <>
-      <section className="h-screen flex items-center mb-40" id="about">
-        <div className="lg:flex lg:mx-28 mx-10 gap-20">
-          <div className="lg:text-right flex flex-col lg:items-end items-center justify-center lg:w-1/2 gap-11">
+      <section className="lg:h-screen flex items-center mb-40" id="about">
+        <div className="lg:flex lg:mx-28 mx-10 gap-20 lg:mt-0 mt-20">
+          <div className="lg:text-right flex flex-col lg:items-end items-center justify-center lg:w-1/2 lg:gap-11 gap-5">
             <h1
               data-aos="fade-up"
               data-aos-offset="0"
