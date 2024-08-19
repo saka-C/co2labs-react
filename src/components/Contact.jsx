@@ -118,7 +118,7 @@ const Contact = () => {
           onSubmit={handleSubmit}
           className="bg-white flex flex-col justify-center md:p-14 p-5 lg:w-1/2 gap-5 rounded-xl shadow-xl"
         >
-          <h4>Ask us about the service you need</h4>
+          <h4>Hi there, how can we help?</h4>
           <input
             type="text"
             className="px-8 py-3 rounded-lg bg-gray-200 w-full"
@@ -142,7 +142,7 @@ const Contact = () => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
-          <h5>Where You Hear About Us?</h5>
+          <h5>Where Did You Hear About Us?</h5>
           <div className="flex flex-wrap gap-4">
             <div className="flex items-center gap-2">
               <input
@@ -163,6 +163,26 @@ const Contact = () => {
                 onChange={(e) => setSource(e.target.value)}
               />
               <label htmlFor="Instagram">Instagram</label>
+            </div>
+            <div className="flex items-center gap-2">
+              <input
+                type="radio"
+                id="Job Ads"
+                value="Job Ads"
+                checked={source === "Job Ads"}
+                onChange={(e) => setSource(e.target.value)}
+              />
+              <label htmlFor="Job Ads">Job Ads</label>
+            </div>
+            <div className="flex items-center gap-2">
+              <input
+                type="radio"
+                id="Events and Seminars"
+                value="Events and Seminars"
+                checked={source === "Events and Seminars"}
+                onChange={(e) => setSource(e.target.value)}
+              />
+              <label htmlFor="Events and Seminars">Events and Seminars</label>
             </div>
             <div className="flex items-center gap-2">
               <input

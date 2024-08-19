@@ -85,7 +85,7 @@ const Footer = () => {
             </li>
             <li>
               <a href="#" className="flex items-center">
-                <i className="bx bxl-instagram text-2xl"></i>@co2labs
+                <i className="bx bxl-gmail text-2xl"></i>info@co2labs.com
               </a>
             </li>
             <li>
@@ -93,7 +93,7 @@ const Footer = () => {
                 href="https://maps.app.goo.gl/sXvWLYMD6nfN7pK3A"
                 className="flex items-center"
               >
-                <i className="bx bx-map-alt text-2xl"></i>Coding Collective SG{" "}
+                <i className="bx bx-map-alt text-2xl"></i>100D Pasir Panjang Road{" "}
               </a>
             </li>
           </ul>
@@ -103,7 +103,7 @@ const Footer = () => {
         <span>©2024 CO2 Labs. All Right Reserved</span>
         <div className="flex gap-10">
           <span>FAQ</span>
-          <span>Terms & Policy</span>
+          <a href="/termspolicy">Terms & Policy</a>
         </div>
       </div>
     </footer>

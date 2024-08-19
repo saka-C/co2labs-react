@@ -45,6 +45,14 @@ const Navbar = () => {
     }
   };
 
+  const whatsappClick = () => {
+    const phoneNumber = '62895622144623'; // Ganti dengan nomor WhatsApp kamu
+    const message = 'Hi Co2, I would like ask about your services.';
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    window.location.href = url;
+  };
+
   return (
     <>
       <SmoothScrollNav />
@@ -194,6 +202,7 @@ const Navbar = () => {
         <Button
           className="order-3 md:block hidden hover:scale-110 transition-all hover:shadow-primary-600 hover:shadow-md"
           text="Get Started Today!"
+          onClick={whatsappClick}
         />
         {isMobile && <Sidebar />}
       </nav>

@@ -73,16 +73,16 @@ const Portfolio = () => {
         <div className="md:w-64 w-96">
           <a
             className="group relative block rounded-xl overflow-hidden focus:outline-none"
-            href="#"
+            href="https://octopay.asia/"
           >
             <div className="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
               <img
                 className=" group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover"
-                src="/images/portfolio-3.png"
+                src="/images/portfolio-4.png"
                 alt=""
               />
             </div>
-            <h5 className="mt-3">Lorem Ipsum Dolor Sit Amet</h5>
+            <h5 className="mt-3">Octopay Payment</h5>
           </a>
         </div>
       </div>

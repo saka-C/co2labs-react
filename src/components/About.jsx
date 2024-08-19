@@ -1,4 +1,4 @@
-import Approach from "./Approach";
+
 import TeamProfile from "./TeamProfile";
 
 const About = () => {
@@ -51,11 +51,10 @@ const About = () => {
             data-aos-delay="150"
             data-aos-easing="ease-in-out"
           >
-            <img src="/images/about-img.png" alt="About img" />
+            <img src="/images/about-img.png" alt="About img" className="rounded-xl"/>
           </div>
         </div>
       </section>
-      <Approach />
       <TeamProfile />
     </>
   );

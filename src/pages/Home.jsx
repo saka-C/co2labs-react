@@ -5,6 +5,7 @@ import About from "../components/About";
 import Portfolio from "../components/Portfolio";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import Approach from "../components/Approach";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <div className="w-full">
         <HeaderHome />
         <ServicesSec />
+        <Approach />
         <About />
         <Portfolio />
         <Contact />
