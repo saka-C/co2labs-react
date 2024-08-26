@@ -46,7 +46,7 @@ const Navbar = () => {
   };
 
   const whatsappClick = () => {
-    const phoneNumber = '62895622144623'; // Ganti dengan nomor WhatsApp kamu
+    const phoneNumber = '6581181595'; // Ganti dengan nomor WhatsApp kamu
     const message = 'Hi Co2, I would like ask about your services.';
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

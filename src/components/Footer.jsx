@@ -17,7 +17,7 @@ const Footer = () => {
   };
 
   const whatsappClick = () => {
-    const phoneNumber = "62895622144623"; // Ganti dengan nomor WhatsApp kamu
+    const phoneNumber = "6581181595"; // Ganti dengan nomor WhatsApp kamu
     const message = "Hi Co2, I would like ask about your services.";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message
@@ -80,7 +80,7 @@ const Footer = () => {
             <h6>Contact</h6>
             <li>
               <button onClick={whatsappClick} className="flex items-center">
-                <i className="bx bxs-phone text-2xl"></i>081-123-456
+                <i className="bx bxs-phone text-2xl"></i>65-8118-1595
               </button>
             </li>
             <li>
@@ -102,7 +102,7 @@ const Footer = () => {
       <div className="flex justify-between mt-10 bot">
         <span>©2024 CO2 Labs. All Right Reserved</span>
         <div className="flex gap-10">
-          <span>FAQ</span>
+          <a href="/faq">FAQ</a>
           <a href="/termspolicy">Terms & Policy</a>
         </div>
       </div>

@@ -139,4 +139,8 @@
   }
   .col-left{height: 100%;}
   .col-right{width: 50%;}
+
+  summary{
+    font-weight: 600;
+  }
 }

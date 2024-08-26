@@ -16,7 +16,7 @@ const TeamProfile = () => {
         </div> */}
       </div>
       <div className="lg:flex gap-5">
-        <div className="lg:bg-white rounded-2xl lg:shadow-lg lg:w-1/3 lg:px-10 md:px-36 px-20 pb-10 lg:hover:scale-110 lg:hover:shadow-2xl transition-all">
+        <div className="lg:bg-white rounded-2xl lg:shadow-lg lg:w-1/3 lg:px-10 md:px-36 px-10 pb-10 lg:hover:scale-110 lg:hover:shadow-2xl transition-all">
           <div className="flex flex-col items-center">
             <div className="lg:-mt-24">
               <img
@@ -26,7 +26,7 @@ const TeamProfile = () => {
               />
             </div>
             <h4>Jay Chen</h4>
-            <span className="font-semibold">CEO</span>
+            <span className="font-semibold text-center">CEO</span>
             <div className="italic text-center mt-2 text-xs">
               Jay began his career in the banking and finance sector, where he
               honed his skills and developed a deep understanding of the
@@ -40,7 +40,7 @@ const TeamProfile = () => {
             </div>
           </div>
         </div>
-        <div className="lg:bg-white rounded-2xl lg:shadow-lg lg:w-1/3 lg:px-10 md:px-36 px-20 pb-10 lg:hover:scale-110 lg:hover:shadow-2xl transition-all">
+        <div className="lg:bg-white rounded-2xl lg:shadow-lg lg:w-1/3 lg:px-10 md:px-36 px-10 pb-10 lg:hover:scale-110 lg:hover:shadow-2xl transition-all">
           <div className="flex flex-col items-center">
             <div className="lg:-mt-24">
               <img
@@ -50,7 +50,7 @@ const TeamProfile = () => {
               />
             </div>
             <h4>Alune</h4>
-            <span className="font-semibold">Development Project Manager</span>
+            <span className="font-semibold text-center">Development Project Manager</span>
             <div className="italic text-center mt-2 text-xs">
               With a background in IT software development, quality testing and
               web design, she brings a deep understanding of the technical and
@@ -65,7 +65,7 @@ const TeamProfile = () => {
             </div>
           </div>
         </div>
-        <div className="lg:bg-white rounded-2xl lg:shadow-lg lg:w-1/3 lg:px-10 md:px-36 px-20 pb-10 lg:hover:scale-110 lg:hover:shadow-2xl transition-all">
+        <div className="lg:bg-white rounded-2xl lg:shadow-lg lg:w-1/3 lg:px-10 md:px-36 px-10 pb-10 lg:hover:scale-110 lg:hover:shadow-2xl transition-all">
           <div className="flex flex-col items-center">
             <div className="lg:-mt-24">
               <img
@@ -75,7 +75,7 @@ const TeamProfile = () => {
               />
             </div>
             <h4>Ron</h4>
-            <span className="font-semibold">Business Development Lead</span>
+            <span className="font-semibold text-center">Business Development Lead</span>
             <div className="italic text-center mt-2 text-xs">
               With a strong background in business development for finance,
               logistics and real estate industries, Ron has successfully led
