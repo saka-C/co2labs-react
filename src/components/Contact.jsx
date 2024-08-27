@@ -62,12 +62,21 @@ const Contact = () => {
       );
   };
 
+  const whatsappClick = () => {
+    const phoneNumber = "6581181595"; // Ganti dengan nomor WhatsApp kamu
+    const message = "Hi Co2, I would like ask about your services.";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    window.location.href = url;
+  };
   return (
     <section className="lg:mx-28 mx-10 flex flex-col gap-16 py-24" id="contact">
       <div className="md:flex justify-between">
         <h1>Contact Us</h1>
         <div className="flex gap-20 items-center md:mt-0 mt-10">
-          <a href="#">
+          <a href="https://maps.app.goo.gl/sXvWLYMD6nfN7pK3A">
             <svg
               width="41"
               height="40"
@@ -81,7 +90,7 @@ const Contact = () => {
               />
             </svg>
           </a>
-          <a href="#">
+          <a href="info@labsco2">
             <svg
               width="41"
               height="33"
@@ -95,7 +104,7 @@ const Contact = () => {
               />
             </svg>
           </a>
-          <a href="#">
+          <button onClick={whatsappClick}>
             <svg
               width="47"
               height="47"
@@ -110,7 +119,7 @@ const Contact = () => {
                 fill="black"
               />
             </svg>
-          </a>
+          </button>
         </div>
       </div>
       <div className="lg:flex xl:gap-24 gap-5 lg:justify-between">

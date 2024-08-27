@@ -2,7 +2,7 @@ const Portfolio = () => {
   return (
     <section className="bg-primary-500 lg:px-28 px-10 py-20 mt-20 text-bgbase" id="portfolio">
       <h1 className="mb-10">Our Portfolio</h1>
-      <div className="flex flex-wrap lg:justify-between justify-center gap-7">
+      <div className="flex flex-wrap  justify-center gap-8">
         <div className="md:w-64 w-96">
           <a
             className="group relative block rounded-xl overflow-hidden focus:outline-none"
@@ -63,7 +63,7 @@ const Portfolio = () => {
                 alt=""
               />
             </div>
-            <h5 className="mt-3">Joywaltzstudio Extended</h5>
+            <h5 className="mt-3">Joywaltzstudio Academy</h5>
           </a>
         </div>
         
