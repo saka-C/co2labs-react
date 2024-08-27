@@ -10,9 +10,11 @@ const Header = () => {
   }, []);
 
   const whatsappClick = () => {
-    const phoneNumber = '6581181595'; // Ganti dengan nomor WhatsApp kamu
-    const message = 'Hi Co2, I would like ask about your services.';
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const phoneNumber = "6581181595"; // Ganti dengan nomor WhatsApp kamu
+    const message = "Hi Co2, I would like ask about your services.";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
 
     window.location.href = url;
   };
@@ -42,7 +44,7 @@ const Header = () => {
                 data-aos-easing="ease-in-sine"
                 className="sm:text-5xl text-3xl sm:flex flex-col items-start"
               >
-                Where Code Meets{" "}
+                <div className="mb-4">Where Code Meets</div>
                 <span className="font-orbitron font-bold sm:text-5xl text-3xl  bg-primary-500 text-bgbase px-5">
                   Creativity
                 </span>
@@ -61,11 +63,13 @@ const Header = () => {
                 data-aos-anchor-placement="bottom-bottom"
                 className="flex gap-8 items-center"
               >
-                <Button
-                  className="hover:scale-110 transition-all hover:shadow-primary-600 hover:shadow-md"
-                  onClick={whatsappClick}
-                  text="Get a free consult"
-                />
+                <div className="flex sm:justify-start justify-center w-full">
+                  <Button
+                    className="hover:scale-110 transition-all hover:shadow-primary-600 hover:shadow-md"
+                    onClick={whatsappClick}
+                    text="Get a free consult"
+                  />
+                </div>
               </div>
             </div>
           </div>

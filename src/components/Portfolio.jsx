@@ -54,7 +54,7 @@ const Portfolio = () => {
         <div className="md:w-64 w-96">
           <a
             className="group relative block rounded-xl overflow-hidden focus:outline-none"
-            href="https://joywaltzstudio.com/"
+            href="https://pianistprodigy.com/"
           >
             <div className="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
               <img

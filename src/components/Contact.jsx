@@ -16,7 +16,7 @@ const Contact = () => {
     const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return re.test(String(email).toLowerCase());
   };
-
+ ` `
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -75,7 +75,7 @@ const Contact = () => {
     <section className="lg:mx-28 mx-10 flex flex-col gap-16 py-24" id="contact">
       <div className="md:flex justify-between">
         <h1>Contact Us</h1>
-        <div className="flex gap-20 items-center md:mt-0 mt-10">
+        <div className="flex sm:gap-20 gap-10 justify-center items-center md:mt-0 mt-10">
           <a href="https://maps.app.goo.gl/sXvWLYMD6nfN7pK3A">
             <svg
               width="41"

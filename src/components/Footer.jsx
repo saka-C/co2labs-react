@@ -80,12 +80,12 @@ const Footer = () => {
             <h6>Contact</h6>
             <li>
               <button onClick={whatsappClick} className="flex items-center">
-                <i className="bx bxs-phone text-2xl"></i>65-8118-1595
+                <i className="bx bxs-phone text-2xl mr-2"></i>+65-8118-1595
               </button>
             </li>
             <li>
               <a href="#" className="flex items-center">
-                <i className="bx bxl-gmail text-2xl"></i>info@co2labs.com
+                <i className="bx bxl-gmail text-2xl mr-2"></i>info@co2labs.com
               </a>
             </li>
             <li>
@@ -93,7 +93,7 @@ const Footer = () => {
                 href="https://maps.app.goo.gl/sXvWLYMD6nfN7pK3A"
                 className="flex items-center"
               >
-                <i className="bx bx-map-alt text-2xl"></i>100D Pasir Panjang Road{" "}
+                <i className="bx bx-map-alt text-2xl mr-2"></i>100D Pasir Panjang Road{" "}
               </a>
             </li>
           </ul>
