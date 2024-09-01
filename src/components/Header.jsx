@@ -63,7 +63,7 @@ const Header = () => {
                 data-aos-anchor-placement="bottom-bottom"
                 className="flex gap-8 items-center"
               >
-                <div className="flex sm:justify-start justify-center w-full">
+                <div className="flex sm:justify-start justify-end w-full">
                   <Button
                     className="hover:scale-110 transition-all hover:shadow-primary-600 hover:shadow-md"
                     onClick={whatsappClick}
