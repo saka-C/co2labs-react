@@ -10,7 +10,7 @@ import FAQ from "./pages/FAQ";
 import ScrollToTop from "./function/ScrollToTop";
 
 function App() {
-  const maintenancePages = ["/service/ai-solution"];
+  const maintenancePages = [""];
 
   return (
     <Router>
