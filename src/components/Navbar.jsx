@@ -57,7 +57,7 @@ const Navbar = () => {
     <>
       <SmoothScrollNav />
       <nav
-        className={`flex items-center justify-between top-0 z-20 lg:px-28 px-10 py-2 fixed w-screen transition-all duration-300 ease-in-out ${
+        className={`flex flex-row sm:flex-row-reverse items-center justify-between top-0 z-20 lg:px-28 px-10 py-2 fixed w-screen transition-all duration-300 ease-in-out ${
           isScrolled ? "shadow-custom-drop" : "bg-transparent"
         }`}
       >
