@@ -38,10 +38,10 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_j0wee04", // Ganti dengan Service ID Anda
-        "template_kdsys3k", // Ganti dengan Template ID Anda
+        "service_qycsnph", // Ganti dengan Service ID Anda
+        "template_4nuofmy", // Ganti dengan Template ID Anda
         templateParams,
-        "9rFtjMx41be85A8L2" // Public Key Anda
+        "J2x4Aclyww44IOHxs" // Public Key Anda
       )
       .then(
         (response) => {
