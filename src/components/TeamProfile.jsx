@@ -33,7 +33,7 @@ const TeamProfile = () => {
               industry. Leveraging this foundation, he expanded into HR
               operations and outsourcing, successfully growing his businesses by
               delivering exceptional service to renowned international brands
-              such as Citibank, Coca-cola, and Humanica. CO2 Labs provides a
+              like Huawei, Coca-Cola, and GlaxoSmithKline. CO2 Labs provides a
               solutions based approach to champion human resource and
               outsourcing through strategic consultation and meticulously
               planned placements.

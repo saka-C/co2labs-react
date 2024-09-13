@@ -2,6 +2,7 @@ import Button from "./Button";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
+import WhatsappContact from "../function/WhatsappContact";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -62,15 +63,8 @@ const Contact = () => {
       );
   };
 
-  const whatsappClick = () => {
-    const phoneNumber = "6581181595"; // Ganti dengan nomor WhatsApp kamu
-    const message = "Hi Co2, I would like ask about your services.";
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      message
-    )}`;
+  <WhatsappContact />
 
-    window.location.href = url;
-  };
   return (
     <section className="lg:mx-28 mx-10 flex flex-col gap-16 py-24" id="contact">
       <div className="md:flex justify-between">
@@ -104,7 +98,7 @@ const Contact = () => {
               />
             </svg>
           </a>
-          <button onClick={whatsappClick}>
+          <button onClick={WhatsappContact}>
             <svg
               width="47"
               height="47"

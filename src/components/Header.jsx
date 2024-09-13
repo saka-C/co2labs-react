@@ -1,6 +1,7 @@
 import Button from "./Button";
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect } from "react";
+import WhatsappContact from "../function/WhatsappContact";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -9,15 +10,7 @@ const Header = () => {
     AOS.init();
   }, []);
 
-  const whatsappClick = () => {
-    const phoneNumber = "6581181595"; // Ganti dengan nomor WhatsApp kamu
-    const message = "Hi Co2, I would like ask about your services.";
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      message
-    )}`;
-
-    window.location.href = url;
-  };
+  <WhatsappContact />
 
   return (
     <>
@@ -66,7 +59,7 @@ const Header = () => {
                 <div className="flex justify-start w-full">
                   <Button
                     className="hover:scale-110 transition-all hover:shadow-primary-600 hover:shadow-md"
-                    onClick={whatsappClick}
+                    onClick={WhatsappContact}
                     text="Get a free consult"
                   />
                 </div>

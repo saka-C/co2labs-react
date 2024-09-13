@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import useWindowSize from "./UseWindowsize";
 import SmoothScrollNav from "../function/SmoothScrolling";
+import WhatsappContact from "../function/WhatsappContact";
 
 const Navbar = () => {
   const { width } = useWindowSize();
@@ -45,13 +46,7 @@ const Navbar = () => {
     }
   };
 
-  const whatsappClick = () => {
-    const phoneNumber = '6581181595'; // Ganti dengan nomor WhatsApp kamu
-    const message = 'Hi Co2, I would like ask about your services.';
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-    window.location.href = url;
-  };
+  <WhatsappContact />
 
   return (
     <>
@@ -202,7 +197,7 @@ const Navbar = () => {
         <Button
           className="order-3 md:block hidden hover:scale-110 transition-all hover:shadow-primary-600 hover:shadow-md"
           text="Get Started Today!"
-          onClick={whatsappClick}
+          onClick={WhatsappContact}
         />
         {isMobile && <Sidebar />}
       </nav>
