@@ -32,7 +32,7 @@ const Footer = () => {
           <h3>Let’s Grow With CO2 Labs</h3>
           <div className="flex flex-col gap-5">
             <h5>Get Exclusive Updates From Us</h5>
-            <form action="mailto:shaka.aufa.alhajar@gmail.com" method="post" encType="text/plain" className="flex">
+            <form action="" method="post" encType="text/plain" className="flex">
               <input
                 type="text"
                 placeholder="Yourmail@example.com"
