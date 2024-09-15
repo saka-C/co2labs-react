@@ -2,6 +2,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import WhatsappContact from "../function/WhatsappContact";
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -22,54 +23,58 @@ const Footer = () => {
 
   <WhatsappContact />;
 
+  const { executeRecaptcha } = useGoogleReCaptcha(); // Hook untuk reCAPTCHA
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  
 
   // Fungsi untuk mengirim email
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Data yang akan dikirimkan dalam email (untuk kedua template)
-    const templateParams = {
-      user_email: email, // Ambil email dari input pengguna
-    };
+    if (!executeRecaptcha) {
+      alert("Recaptcha is not available yet");
+      setIsSubmitting(false);
+      return;
+    }
 
-    // Kirim email ke Admin (mengumpulkan data form)
-    emailjs
-      .send(
+    try {
+      // Mendapatkan token reCAPTCHA
+      const recaptchaToken = await executeRecaptcha("submit_form");
+
+      const templateParams = {
+        user_email: email,
+        "g-recaptcha-response": recaptchaToken, // Kirim token reCAPTCHA
+      };
+
+      // Kirim email ke Admin (mengumpulkan data form)
+      await emailjs.send(
         "service_qycsnph",
         "template_4nuofmy",
         templateParams,
         "J2x4Aclyww44IOHxs"
-      )
-      .then((result) => {
-        console.log("Email ke admin berhasil dikirim!", result.text);
+      );
 
-        // Setelah email ke admin berhasil dikirim, kirim balasan otomatis ke pengguna
-        return emailjs.send(
-          "service_qycsnph",
-          "template_0utilxt",
-          templateParams,
-          "J2x4Aclyww44IOHxs"
-        );
-      })
-      .then((result) => {
-        console.log(
-          "Balasan otomatis berhasil dikirim ke pengguna!",
-          result.text
-        );
-        setModalIsOpen(true); // Tampilkan modal berhasil
-      })
-      .catch((error) => {
-        console.log("Gagal mengirim email:", error.text);
-        setModalIsOpen(true); // Tetap tampilkan modal jika gagal
-      })
-      .finally(() => {
-        setIsSubmitting(false);
-        setEmail(""); // Reset form input setelah selesai
-      });
+      console.log("Email ke admin berhasil dikirim!");
+
+      // Setelah email ke admin berhasil dikirim, kirim balasan otomatis ke pengguna
+      await emailjs.send(
+        "service_qycsnph",
+        "template_0utilxt",
+        templateParams,
+        "J2x4Aclyww44IOHxs"
+      );
+
+      console.log("Balasan otomatis berhasil dikirim ke pengguna!");
+      setModalIsOpen(true); // Tampilkan modal berhasil
+    } catch (error) {
+      console.log("Gagal mengirim email:", error.text);
+    } finally {
+      setIsSubmitting(false);
+      setEmail(""); // Reset form input setelah selesai
+    }
   };
 
   return (
@@ -87,12 +92,12 @@ const Footer = () => {
                   placeholder="Yourmail@example.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="py-2 px-5 sm:w-auto w-full rounded-l-full text-black"
+                  className="py-2 px-5 rounded-l-full text-black"
                   required
                 />
                 <button
                   type="submit"
-                  className="bg-yel py-2 px-5 rounded-r-full font-semibold text-black"
+                  className="bg-yellow-500 py-2 px-5 rounded-r-full font-semibold text-black"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Submitting..." : "Subscribe"}
