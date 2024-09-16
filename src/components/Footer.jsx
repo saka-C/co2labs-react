@@ -2,11 +2,12 @@ import { useNavigate, useLocation } from "react-router-dom";
 import WhatsappContact from "../function/WhatsappContact";
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'; // Import useGoogleReCaptcha
 
 const Footer = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { executeRecaptcha } = useGoogleReCaptcha(); // Mengambil executeRecaptcha dari hook
 
   const handleNavigation = (sectionId) => {
     if (location.pathname !== "/") {
@@ -22,12 +23,10 @@ const Footer = () => {
   };
 
   <WhatsappContact />;
-
-  const { executeRecaptcha } = useGoogleReCaptcha(); // Hook untuk reCAPTCHA
+  
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  
 
   // Fungsi untuk mengirim email
   const handleSubmit = async (e) => {
@@ -35,26 +34,28 @@ const Footer = () => {
     setIsSubmitting(true);
 
     if (!executeRecaptcha) {
-      alert("Recaptcha is not available yet");
+      console.log('Execute recaptcha is not available');
       setIsSubmitting(false);
       return;
     }
 
+    // Dapatkan token reCAPTCHA
+    const token = await executeRecaptcha('submit_form');
+    console.log('Token reCAPTCHA:', token);
+
+    // Siapkan parameter email yang dikirim, termasuk token reCAPTCHA
+    const templateParams = {
+      user_email: email,
+      recaptchaToken: token, // Tambahkan token reCAPTCHA ke dalam parameter
+    };
+
     try {
-      // Mendapatkan token reCAPTCHA
-      const recaptchaToken = await executeRecaptcha("submit_form");
-
-      const templateParams = {
-        user_email: email,
-        "g-recaptcha-response": recaptchaToken, // Kirim token reCAPTCHA
-      };
-
       // Kirim email ke Admin (mengumpulkan data form)
       await emailjs.send(
-        "service_qycsnph",
-        "template_4nuofmy",
+        "service_qycsnph", // Ganti dengan Service ID Anda
+        "template_4nuofmy", // Ganti dengan Template ID Anda
         templateParams,
-        "J2x4Aclyww44IOHxs"
+        "J2x4Aclyww44IOHxs" // Ganti dengan Public Key Anda
       );
 
       console.log("Email ke admin berhasil dikirim!");
@@ -70,7 +71,7 @@ const Footer = () => {
       console.log("Balasan otomatis berhasil dikirim ke pengguna!");
       setModalIsOpen(true); // Tampilkan modal berhasil
     } catch (error) {
-      console.log("Gagal mengirim email:", error.text);
+      console.log("Gagal mengirim email:", error);
     } finally {
       setIsSubmitting(false);
       setEmail(""); // Reset form input setelah selesai
