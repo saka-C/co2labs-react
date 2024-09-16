@@ -32,7 +32,7 @@ const Sidebar = ({ className = "" }) => {
 
   return (
     <div>
-      <button onClick={toggleSidebar} className={`p-4 ${className}`}>
+      <button onClick={toggleSidebar} className={`p-4 lg:hidden ${className}`}>
         <FaBars size={24} />
       </button>
 

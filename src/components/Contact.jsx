@@ -84,7 +84,7 @@ const Contact = () => {
               />
             </svg>
           </a>
-          <a href="info@labsco2">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@co2labs.com">
             <svg
               width="41"
               height="33"

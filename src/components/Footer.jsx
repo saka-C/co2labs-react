@@ -23,7 +23,7 @@ const Footer = () => {
   };
 
   <WhatsappContact />;
-  
+
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -164,9 +164,9 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="flex justify-between mt-10 bot">
+        <div className="flex sm:flex-row flex-col-reverse justify-between mt-10 bot ">
           <span>©2024 CO2 Labs. All Right Reserved</span>
-          <div className="flex gap-10">
+          <div className="flex gap-10 sm:mb-0 mb-5">
             <a href="/faq">FAQ</a>
             <a href="/termspolicy">Terms & Policy</a>
           </div>
