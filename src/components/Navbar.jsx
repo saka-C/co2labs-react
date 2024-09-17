@@ -52,7 +52,7 @@ const Navbar = () => {
     <>
       <SmoothScrollNav />
       <nav
-        className={`flex sm:flex-row flex-row-reverse items-center justify-between top-0 z-20 lg:px-28 px-10 py-2 fixed w-screen transition-all duration-300 ease-in-out ${
+        className={`flex lg:flex-row flex-row-reverse items-center justify-between top-0 z-20 lg:px-28 px-10 py-2 fixed w-screen transition-all duration-300 ease-in-out ${
           isScrolled ? "shadow-custom-drop" : "bg-transparent"
         }`}
       >
@@ -195,7 +195,7 @@ const Navbar = () => {
           </button>
         </ul>
         <Button
-          className="order-3 md:block hidden hover:scale-110 transition-all hover:shadow-primary-600 hover:shadow-md"
+          className="order-3 lg:block hidden hover:scale-110 transition-all hover:shadow-primary-600 hover:shadow-md"
           text="Get Started Today!"
           onClick={WhatsappContact}
         />

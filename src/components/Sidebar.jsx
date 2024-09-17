@@ -5,6 +5,7 @@ import { FaBars } from "react-icons/fa";
 import { Menu } from "@headlessui/react";
 import { Transition } from "@headlessui/react";
 import Button from "./Button";
+import WhatsappContact from "../function/WhatsappContact";
 
 // eslint-disable-next-line react/prop-types
 const Sidebar = ({ className = "" }) => {
@@ -32,7 +33,7 @@ const Sidebar = ({ className = "" }) => {
 
   return (
     <div>
-      <button onClick={toggleSidebar} className={`p-4 lg:hidden ${className}`}>
+      <button onClick={toggleSidebar} className={`p-4 order-2 lg:hidden ${className}`}>
         <FaBars size={24} />
       </button>
 
@@ -96,6 +97,7 @@ const Sidebar = ({ className = "" }) => {
             <Button
               text="Get Started Today!"
               className="text-bgbase w-full py-3 mt-5"
+              onClick={WhatsappContact}
             />
           </nav>
         </aside>
