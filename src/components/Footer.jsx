@@ -93,7 +93,7 @@ const Footer = () => {
                   placeholder="Yourmail@example.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="py-2 px-5 rounded-l-full text-black"
+                  className="py-2 px-5 rounded-l-full text-black sm:w-72 w-full"
                   required
                 />
                 <button
