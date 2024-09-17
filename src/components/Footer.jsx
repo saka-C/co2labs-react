@@ -148,7 +148,7 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <a href="#" className="flex items-center">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@co2labs.com" className="flex items-center">
                   <i className="bx bxl-gmail text-2xl mr-2"></i>info@co2labs.com
                 </a>
               </li>
