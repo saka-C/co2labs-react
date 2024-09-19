@@ -70,7 +70,7 @@ const Contact = () => {
       <div className="md:flex justify-between">
         <h1>Contact Us</h1>
         <div className="flex sm:gap-20 gap-10 justify-center items-center md:mt-0 mt-10">
-          <a href="https://maps.app.goo.gl/sXvWLYMD6nfN7pK3A">
+          <a href="https://www.google.com/maps/place/100D+Pasir+Panjang+Rd,+%2302-08,+Singapore+118520/@1.2762578,103.7959678,17z/data=!3m1!4b1!4m6!3m5!1s0x31da1bb8dc165b8d:0x882cc9985cca5f5d!8m2!3d1.2762578!4d103.7959678!16s%2Fg%2F11tfw3lqws?entry=ttu&g_ep=EgoyMDI0MDkxNy4wIKXMDSoASAFQAw%3D%3D">
             <svg
               width="41"
               height="40"
