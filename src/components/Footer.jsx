@@ -154,7 +154,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://maps.app.goo.gl/sXvWLYMD6nfN7pK3A"
+                  href="https://www.google.com/maps/place/100D+Pasir+Panjang+Rd,+%2302-08,+Singapore+118520/@1.2762578,103.7959678,17z/data=!3m1!4b1!4m6!3m5!1s0x31da1bb8dc165b8d:0x882cc9985cca5f5d!8m2!3d1.2762578!4d103.7959678!16s%2Fg%2F11tfw3lqws?entry=ttu&g_ep=EgoyMDI0MDkxNy4wIKXMDSoASAFQAw%3D%3D"
                   className="flex items-center"
                 >
                   <i className="bx bx-map-alt text-2xl mr-2"></i>100D Pasir
